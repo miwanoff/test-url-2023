@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    Hello, <?= $_POST["name"];?>! You were born on <?= $_POST["date"];?>!
+    Hello, <?= $_REQUEST["name"];?>! You were born on <?= $_REQUEST["date"];?>! hiden info:<?= $_REQUEST["hide"];?>
 </body>
 
 </html>
