@@ -35,6 +35,13 @@ if (isset($_POST['submit'])) {
             echo "$item<br>";
         }
     }
+
+    if (isset($_POST['technologies'])) {
+        echo "technologies:<br/>";
+        $technologies = $_POST['technologies'];
+        foreach ($technologies as $item)
+          echo "$item<br />";
+      }
     // echo "Your City is:" . $_POST["City"] . "<br/>";
     // echo "Your State is:" . $_POST["State"] . "<br/>";
     // echo "<br/>";
@@ -63,6 +70,10 @@ if (isset($_POST['submit'])) {
             <option value="Ruby">RUBY</option>
             <option value="Python">Python</option>
         </select><br>
+
+        JavaScript: <input type="checkbox" name="technologies[]" value="JavaScript" /><br>
+        PHP: <input type="checkbox" name="technologies[]" value="PHP" /><br>
+        Java: <input type="checkbox" name="technologies[]" value="Java" /><br>
         <!-- City:<br /> <input type="text" name="City" /><br />
         State:<br /> <input type="text" name="State" /><br />
         Message:<br /> <textarea name="Message" cols="30" rows="5">
